@@ -54,3 +54,9 @@ body {
 .noscroll::-webkit-scrollbar{
   display: none;
 }
+.swiper-pagination-bullet{
+  background: rgb(255, 255, 255) !important;
+ margin-top: 170px !important;
+ border-radius: 0% !important;
+ width: 30px !important;
+}
