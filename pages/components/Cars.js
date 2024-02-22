@@ -41,7 +41,7 @@ function Cars({ filter }) {
                         <img src={car.images[0].asset.url} className="w-full rounded-t-[7px] h-full object-cover"></img>
                     </div>
                     <div className="flex flex-col pl-2 pt-2 lg:text-xl">
-                        <p className="flex items-center   font-bold">{car.model}</p>
+                        <p className="flex items-center text-black  font-bold">{car.model}</p>
                         <p className="flex items-center text-red-800  font-bold">{car.price + " ₼"}</p>
                     </div>
                 </div>
