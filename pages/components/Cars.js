@@ -50,13 +50,13 @@ const [number,setNumber]=useState(4)
                     </div>
                </Link>
             })}
-        </div> : <div className="w-full pt-[50px] flex flex-col items-center justify-center">
+        </div> : <div className="w-full text-black pt-[50px] flex flex-col items-center justify-center">
            <HourglassDisabledIcon className="text-[70px]"/>
             <h1 className="text-[18px] text-center">Bu kateqoriyada maşın yoxdur </h1>
             </div>}
-            <div className="flex w-full justify-center items-center">
+            {cars.length > 0 ? <div className="flex w-full justify-center items-center">
             <button onClick={()=>{setNumber(number+4)}} className="bg-blue-600 text-white flex items-center justify-center pl-2 pr-2 h-[40px] w-[120px]">Daha çox</button>
-            </div>
+            </div> : null}
        </div>)
 }
 export default Cars
