@@ -1,9 +1,9 @@
 // i18n.js
-import i18n from 'i18next';
+import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 // Örnek dil çevirileri
-const resources = {
+export const resources = {
   en: {
     translation: {
       "Maşınlar": "Cars",
@@ -52,7 +52,7 @@ const resources = {
   }
 };
 
-i18n
+i18next
   .use(initReactI18next) // react için i18n başlatma
   .init({
     resources,
@@ -63,4 +63,4 @@ i18n
     }
   });
 
-export default i18n;
+export default i18next;
