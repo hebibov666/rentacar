@@ -60,3 +60,13 @@ body {
  border-radius: 0% !important;
  width: 30px !important;
 }
+.dropdown{
+  background: rgb(255, 255, 255) !important;
+  height: 30px !important;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: 1px solid #115eec;
+}
+.car-box{
+  position: relative !important;
+}

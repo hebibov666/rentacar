@@ -3,13 +3,16 @@ import SliderSection from "./components/Slider";
 import { client } from "@/sanity/lib/client";
 import { useState } from "react";
 import AllCars from "./components/AllCars";
+import Footer from "./components/Footer";
+import About from "./components/AboutUs";
 export default function Home() {
   return (
-    <main>
+    <main className="pb-[0px]">
+      <Navbar/>
   <div className="flex flex-col">
-  <Navbar/>
     <SliderSection/>
    <AllCars/>
+   <About/>
   </div>
     </main>
   );

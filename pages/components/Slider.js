@@ -9,16 +9,16 @@ function SliderSection() {
   const images = ["./car1.png", "./car2.png", "./car3.png"];
   
   return (
-    <div>
+    <div className='mt-[60px] bg-[#1E90FF] mb-[20px]'>
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
         modules={[Autoplay,EffectCoverflow,EffectCube]}
         loop={true}
         autoplay={{
-            delay: 2000,
+            delay: 3000,
         }}
-        effect='coverflow'
+        effect='cube'
        className='slide pt-[100px] flex items-center justify-center'
       >
         {images.map((image, index) => (
