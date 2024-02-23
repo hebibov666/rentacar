@@ -1,8 +1,6 @@
 import { useState } from "react"
 import Cars from "./Cars"
-import { useTranslation } from 'react-i18next';
 function AllCars(){
-    const {t}=useTranslation()
     const [filter,setFilter]=useState("Hamısı")
     const types=[
         {
@@ -36,7 +34,7 @@ function AllCars(){
 <div className="w-full flex justify-center">
                 <ul className="flex gap-[10px] text-[18px] font-[500] pl-2 overflow-scroll pr-2 noscroll">
                     {types.map(type=>{
-                        return <li onClick={()=>{filterCars(type.type)}} className={`text-xl border-[1px] ${filter===type.type ? "bg-[#1E90FF] text-white" : "text-black"} border-[#1E90FF] pl-2 pr-2 h-[35px] flex items-center rounded-[5px]`}>{t(type.type)}</li>
+                        return <li onClick={()=>{filterCars(type.type)}} className={`text-xl border-[1px] ${filter===type.type ? "bg-[#1E90FF] text-white" : "text-black"} border-[#1E90FF] pl-2 pr-2 h-[35px] flex items-center rounded-[5px]`}>{type.type}</li>
                     })}
                 </ul>
             </div>

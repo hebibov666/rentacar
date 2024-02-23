@@ -5,6 +5,7 @@ import { useState } from "react";
 import AllCars from "./components/AllCars";
 import Footer from "./components/Footer";
 import About from "./components/AboutUs";
+import Rules from "./components/Rules";
 export default function Home() {
   return (
     <main className="pb-[0px]">
@@ -12,6 +13,7 @@ export default function Home() {
   <div className="flex flex-col">
     <SliderSection/>
    <AllCars/>
+   <Rules/>
    <About/>
   </div>
     </main>

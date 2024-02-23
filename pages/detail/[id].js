@@ -10,10 +10,8 @@ import { useState } from "react";
 import FlightClassIcon from '@mui/icons-material/FlightClass';
 import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import { useTranslation } from 'react-i18next';
-import LanguageSelector from "../components/ChangeLanguage";
+import Footer from "../components/Footer";
 function CarDetail({car}){
-    const {t}=useTranslation()
     const [bigImage,setBigImage]=useState(false)
     const router=useRouter()
     console.log(car[0])
@@ -26,9 +24,8 @@ function CarDetail({car}){
 <div className="w-full justify-between pr-2 bg-blue-600 text-white h-[40px] font-bold flex items-center pl-2">
    <div className="pl-2 flex items-center gap-[10px]">
    <ArrowBackIos onClick={()=>{router.back()}}/>
-   <h1>{t("Ətraflı")}</h1>
+   <h1>Ətraflı</h1>
    </div>
-   <LanguageSelector/>
 </div>
 <div className="w-full grid gap-[20px] grid-cols-2 max-[691px]:grid-cols-1 pt-[20px]">
 <div className={`${bigImage===true ? "fixed top-0 left-0 z-[9999] flex items-center bg-black w-full h-[100vh]" : "w-full relative  grid grid-cols-1 max-[691px]:w-full min-[691px]:pl-[10px]"}`}>
@@ -54,17 +51,17 @@ function CarDetail({car}){
     <h1 className="font-[500] bg-blue-600 rounded-[20px] text-white flex w-[80px] h-[30px] items-center justify-center">{car[0].price + " ₼"}</h1>
 </div>
 <ul className="flex flex-col bg-[#F5F5F5] shadow-sm shadow-[#E8E8E8]  gap-[10px] w-full rounded-[5px]">
-   <li className="flex items-center text-black gap-[10px] p-2 border-b-[1px] border-[#C8C8C8]"><FlightClassIcon/><h1 className="font-[400]">{t("Oturacaq sayı")}:</h1>{car[0].seat}</li>
-   <li className="flex items-center text-black  gap-[10px] p-2 border-b-[1px] border-[#C8C8C8]"><LocalGasStationIcon/><h1>{t("Yanacaq növü")}</h1>{car[0].fueltype}:</li>
-   <li className="flex items-center text-black  gap-[10px] p-2 border-b-[1px] border-[#C8C8C8]"><img src="../gear1.png" className="w-[20px] ml-[3px]  h-[20px]"></img><h1 className="pl-[-10px]">{t("Sürətlər qutusu")}:</h1> {car[0].gearbox}</li>
-   <li className="flex items-center text-black  gap-[10px] p-2 border-b-[1px] border-[#C8C8C8]"><CalendarMonthIcon/><h1>{t("Buraxılış ili")}:</h1>{car[0].year}</li>
+   <li className="flex items-center text-black gap-[10px] p-2 border-b-[1px] border-[#C8C8C8]"><FlightClassIcon/><h1 className="font-[400]">Oturacaq sayı:</h1>{car[0].seat}</li>
+   <li className="flex items-center text-black  gap-[10px] p-2 border-b-[1px] border-[#C8C8C8]"><LocalGasStationIcon/><h1>Yanacaq növü:</h1>{car[0].fueltype}:</li>
+   <li className="flex items-center text-black  gap-[10px] p-2 border-b-[1px] border-[#C8C8C8]"><img src="../gear1.png" className="w-[20px] ml-[3px]  h-[20px]"></img><h1 className="pl-[-10px]">Sürətlər qutusu:</h1> {car[0].gearbox}</li>
+   <li className="flex items-center text-black  gap-[10px] p-2 border-b-[1px] border-[#C8C8C8]"><CalendarMonthIcon/><h1>Buraxılış ili:</h1>{car[0].year}</li>
 </ul>
 <div className="bg-[#F5F5F5] p-2 shadow-sm flex flex-col shadow-[#E8E8E8] w-full rounded-[5px]">
-    <h1 className="font-[500]">{t("Açıqlama")}</h1>
+    <h1 className="font-[500] text-black">Açıqlama</h1>
     <p className="text-wrap text-black ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 </div>
 <div className="p-2 flex items-center  justify-center gap-[10px]">
-<button className="bg-blue-600 rounded-[5px] h-[40px] w-[100px] text-white font-bold shadow-md shadow-[#E8E8E8]" >{t("Zəng et")}</button>
+<button className="bg-blue-600 rounded-[5px] h-[40px] w-[100px] text-white font-bold shadow-md shadow-[#E8E8E8]" >Zəng et</button>
 <button className="bg-green-600 rounded-[5px] h-[40px] w-[100px] text-white font-bold shadow-md shadow-[#E8E8E8]" >Whatsapp</button>
 </div>
 </div>

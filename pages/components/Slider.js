@@ -9,7 +9,7 @@ function SliderSection() {
   const images = ["./car1.png", "./car2.png", "./car3.png"];
   
   return (
-    <div className='mt-[60px] bg-[#1E90FF] mb-[20px]'>
+    <div className='mt-[60px] mb-[20px] sm:mb-[10px] relative bg-[#1E90FF]'>
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
