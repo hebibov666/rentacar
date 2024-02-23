@@ -35,7 +35,7 @@ function Rules(){
                     <h1 className="text-red-600 font-bold text-6xl">{rule.id}</h1>
                 </div>
                 <div className="flex justify-center">
-                    <p className="p-[10px] text-center font-bold">{rule.text}</p>
+                    <p className="p-[10px] text-center text-black font-bold">{rule.text}</p>
                 </div>
                 </div>
         })}

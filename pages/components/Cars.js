@@ -4,11 +4,13 @@ import { client } from "@/sanity/lib/client"
 import Link from "next/link"
 import HourglassDisabledIcon from '@mui/icons-material/HourglassDisabled';
 import { useTranslation } from 'react-i18next';
+import CircularProgress from '@mui/material/CircularProgress';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 function Cars({ filter }) {
     const {t}=useTranslation()
     const [cars, setCars] = useState([])
+    const [loading,setLoading]=useState(true)
 const [number,setNumber]=useState(8)
 const [carCount,setCarcount]=useState()
 useEffect(()=>{
@@ -40,8 +42,10 @@ useEffect(()=>{
                 );
                 setCars(response)
                 setCarcount(countResponse)
+                setLoading(false)
             } catch (error) {
                 console.log(error)
+                setLoading(false)
             }
         }
         getCars()
@@ -51,7 +55,7 @@ useEffect(()=>{
     }
     return (
        <div className="pb-[100px] flex flex-col gap-[40px]">
-        {cars.length > 0 ?  <div className="grid w-full p-[10px] max-[415px]:p-[5px] max-[415px]:gap-[5px] place-items-center gap-[10px] overflow-hidden grid-cols-2 md:grid-cols-3 lg:grid-cols-5 min-[1700px]:grid-cols-6">
+        {loading ? <div className="w-full flex justify-center flex-col items-center gap-[15px] pt-[60px]"> <CircularProgress/><h1>Yüklənir</h1></div> : cars.length > 0 ?  <div className="grid w-full p-[10px] max-[415px]:p-[5px] max-[415px]:gap-[5px] place-items-center gap-[10px] overflow-hidden grid-cols-2 md:grid-cols-3 lg:grid-cols-5 min-[1700px]:grid-cols-6">
             {cars.map(car => {
                 return <Link href={`detail/${car._id}`} data-aos="fade-up" data-aos-duration="1500" className="w-full  items-center  rounded-[7px] max-w-[300px] h-[270px] shadow-md shadow-[#BEBEBE] flex flex-col">
     
