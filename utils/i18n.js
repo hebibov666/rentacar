@@ -1,5 +1,5 @@
 // i18n.js
-import i18next from 'i18next';
+import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 // Örnek dil çevirileri
@@ -52,7 +52,7 @@ export const resources = {
   }
 };
 
-i18next
+i18n
   .use(initReactI18next) // react için i18n başlatma
   .init({
     resources,
@@ -63,4 +63,4 @@ i18next
     }
   });
 
-export default i18next;
+export default i18n;
