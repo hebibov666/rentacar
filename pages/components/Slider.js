@@ -21,11 +21,13 @@ function SliderSection() {
         effect='cube'
        className='slide pt-[100px] flex items-center justify-center'
       >
+        
         {images.map((image, index) => (
           <SwiperSlide key={index} className='flex items-center justify-center w-full'>
             <img src={image} alt={`Slide ${index + 1}`} />
           </SwiperSlide>
         ))}
+        
       </Swiper>
     </div>
   );

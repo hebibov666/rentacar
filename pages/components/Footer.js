@@ -5,7 +5,7 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 function Footer(){
     return(
-        <div className="w-full mt-[30px] gap-[30px] p-[20px] h-full bg-[#181818] grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
+        <div id='contact' className="w-full mt-[30px] gap-[30px] p-[20px] h-full bg-[#181818] grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
 <div className='flex flex-col gap-[15px] text-white'>
 <h1 className='text-xl font-bold pb-[10px]'>Əlaqə</h1>
    <span className='flex items-center gap-[10px]'>

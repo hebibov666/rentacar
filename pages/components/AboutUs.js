@@ -6,7 +6,7 @@ function About(){
         AOS.init()
     },)
     return (
-        <div data-aos="fade-up" data-aos-duration="1500" className="w-full flex justify-center items-center">
+        <div id='aboutus' data-aos="fade-up" data-aos-duration="1500" className="w-full flex justify-center items-center">
 <div className="w-[99%] rounded-[10px] bg-black">
 <div className="flex justify-center w-full">
 <h1 className="text-white font-bold pt-[10px] lg:text-2xl text-xl">Haqqımızda</h1>

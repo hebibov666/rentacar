@@ -24,15 +24,15 @@ function Rules(){
         },
     ]
     return(
-        <div className="w-full pb-[90px] flex flex-col gap-[20px] p-[20px]">
+        <div id='rules' className="w-full  pb-[90px] flex flex-col gap-[20px] p-[20px]">
         <div className="flex w-full justify-center items-center">
-            <h1 className="text-black text-xl font-bold">Qaydalar</h1>
+            <h1 className="text-black font-bold text-2xl">İcarə qaydaları</h1>
         </div>
     <div className="grid w-full min-[400px]:grid-cols-2 gap-[20px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {rules.map(rule=>{
-            return <div data-aos="fade-up" data-aos-duration="1500"  className="w-full hover:mt-[-10px] transition-all duration-500 justify-center h-[250px] shadow-md shadow-[#BEBEBE] flex gap-[20px] flex-col items-center">
-                <div className="flex justify-center">
-                    <h1 className="text-red-600 font-bold text-6xl">{rule.id}</h1>
+            return <div data-aos="fade-up" data-aos-duration="1500"  className="w-full bg-white border-l-[5px] border-red-600 hover:mt-[-10px] transition-all duration-500 justify-center h-[250px] shadow-md shadow-[#BEBEBE] flex gap-[20px] flex-col items-center">
+                <div className="flex w-[80px] h-[80px] items-center rounded-full bg-red-600 justify-center">
+                    <h1 className="text-white font-bold text-6xl">{rule.id}</h1>
                 </div>
                 <div className="flex justify-center">
                     <p className="p-[10px] text-center text-black font-bold">{rule.text}</p>
