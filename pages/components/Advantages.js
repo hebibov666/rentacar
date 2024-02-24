@@ -43,7 +43,7 @@ function Advantages(){
     return <div data-aos="zoom-in" data-aos-duration="1500" className='w-full bg-white gap-[15px] h-[250px] shadow-md flex-col max-[660px]:pl-4 rounded-[10px] max-[660px]:flex-row max-[660px]:justify-start max-[660px]:h-[80px] items-center shadow-[#BEBEBE] flex justify-center'>
 <div className='flex items-center justify-center text-red-600 shadow-md shadow-[#BEBEBE] rounded-full h-[100px] w-[100px] max-[660px]:w-[60px] max-[660px]:h-[60px]'>{item.icon}</div>
 <div>
-    <p className='text-black font-bold text-center text-[20px]'>{item.text}</p>
+    <p className='text-black font-bold max-[660px]:text-start text-center text-[20px] max-[475px]:text-[15px]'>{item.text}</p>
 </div>
     </div>
 })}
